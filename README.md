@@ -9,7 +9,7 @@ by running the compiler in syntax-check mode and analysing its diagnostics.
 
 Command:
 
-AutoInclude: Fix includes in current file
+### `AutoInclude: Fix includes in current file`
 
 - Analyses the active file
 - Detects missing headers
