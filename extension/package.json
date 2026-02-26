@@ -1,0 +1,46 @@
+{
+  "name": "autoincludes",
+  "displayName": "AutoInclude",
+  "description": "Automatically fix missing #include directives in C/C++ files using compiler diagnostics.",
+  "version": "1.0.0",
+  "publisher": "kubaniess",
+  "author": "kubaniess",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kubaniess/autoinclude"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Other", "Programming Languages"],
+  "keywords": ["c", "cpp", "include", "autoinclude", "clang"],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autoinclude.fixIncludes",
+        "title": "AutoInclude: Fix includes in current file"
+      },
+      {
+        "command": "autoinclude.fixThenBuild",
+        "title": "AutoInclude: Fix includes then build current file"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.0"
+  }
+}
